@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-sans bg-background-color text-white;
+}
+
+/* Custom scrollbar */
+@layer utilities {
+  .custom-scrollbar {
+    @apply overflow-y-auto;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #4b5563;
+    border-radius: 12px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: #1f2937;
+    border-radius: 12px;
+    margin-block: 4px;
+  }
+}
