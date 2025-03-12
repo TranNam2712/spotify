@@ -8,8 +8,12 @@ import { MdAirplay, MdOutlineCloseFullscreen, MdOutlineSmartDisplay } from 'reac
 import { VscMute } from 'react-icons/vsc'
 import { HiOutlineQueueList } from 'react-icons/hi2'
 import { CgAdd } from 'react-icons/cg'
+import { useDispatch, useSelector } from 'react-redux'
+import { toggleNowPlayingView, toggleQueue } from '../../../redux/features/sidebar/sidebar.slice'
 
 export default function PlayingBar() {
+    const dispatch = useDispatch()
+    const { isShowQueue, isShowNowPlaying } = useSelector((state) => state.sidebar)
     const song = {
         idSong: 1,
         imageSong: "https://docs.material-tailwind.com/img/face-2.jpg",
@@ -82,7 +86,9 @@ export default function PlayingBar() {
                     <Tooltip content="Now playing view">
                         <MdOutlineSmartDisplay
                             size={20}
+                            color={isShowNowPlaying ? "green" : "white"}
                             cursor={"pointer"}
+                            onClick={() => dispatch(toggleNowPlayingView())}
                         />
                     </Tooltip>
 
@@ -90,6 +96,8 @@ export default function PlayingBar() {
                         <HiOutlineQueueList
                             size={20}
                             cursor={"pointer"}
+                            color={isShowQueue ? "green" : "white"}
+                            onClick={() => dispatch(toggleQueue())}
                         />
                     </Tooltip>
 

@@ -6,27 +6,19 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 import { TfiMenuAlt } from "react-icons/tfi";
 import { Tooltip, Button } from "@material-tailwind/react";
 import Playlist from "./sidebar.playlist-left";
+import { useDispatch } from "react-redux";
+import { toggleCollapse, toggleShowMore } from "../../../redux/features/sidebar/sidebar.slice";
 
 const LeftSideBar = ({
   isLogin,
   showMore,
-  setShowMore,
   collapse,
-  setCollapse,
 }) => {
+  const dispatch = useDispatch()
+
   if (!isLogin) {
     return <NotLogin />;
   }
-
-  const toggleShowMore = () => {
-    setShowMore(!showMore);
-    setCollapse(true);
-  };
-
-  const toggleCollapse = () => {
-    setCollapse(!collapse);
-    setShowMore(false);
-  };
 
   return (
     <div className="h-full flex flex-col">
@@ -47,7 +39,7 @@ const LeftSideBar = ({
         >
           <div
             className="flex items-center gap-2 opacity-70 hover:opacity-100 transition-all cursor-pointer"
-            onClick={toggleCollapse}
+            onClick={() => dispatch (toggleCollapse ())}
           >
             {collapse ? (
               <>
@@ -74,7 +66,7 @@ const LeftSideBar = ({
             <Tooltip content="Show more" className="bg-white text-black">
               <div
                 className="p-2 rounded-full cursor-pointer opacity-70 hover:opacity-100 hover:bg-[#1f1f1f] transition-all"
-                onClick={toggleShowMore}
+                onClick={() => dispatch (toggleShowMore ())}
               >
                 {showMore ? (
                   <FaArrowLeft size={20} />
