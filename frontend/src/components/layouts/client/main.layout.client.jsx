@@ -5,6 +5,7 @@ import LeftSideBar from "./sidebar.left";
 import RightSideBar from "./sidebar.right";
 import { useEffect, useState } from "react";
 import NavFooter from "./nav.footer";
+import PlayingBar from "./playing.bar";
 
 const MainLayout = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -31,21 +32,19 @@ const MainLayout = () => {
       <div className="flex-grow flex gap-2 p-2">
         {/* left sidebar */}
         <div
-          className={`${
-            isLogin
+          className={`${isLogin
               ? showMore
                 ? "w-2/5"
                 : collapse
-                ? tablet
-                  ? "w-1/4"
-                  : "w-1/5"
-                : tablet
-                ? "w-[10%]"
-                : "w-[5%]"
+                  ? tablet
+                    ? "w-1/4"
+                    : "w-1/5"
+                  : tablet
+                    ? "w-[10%]"
+                    : "w-[5%]"
               : "w-1/4"
-          } bg-forceground-color rounded-xl ${
-            collapse ? "md:px-2 lg:px-6" : ""
-          }  py-4`}
+            } bg-forceground-color rounded-xl ${collapse ? "md:px-2 lg:px-6" : ""
+            }  py-4`}
         >
           <LeftSideBar
             isLogin={isLogin}
@@ -69,22 +68,21 @@ const MainLayout = () => {
 
         {/* right sidebar */}
         <div
-          className={`${
-            isLogin
+          className={`${isLogin
               ? sidebarRight
                 ? tablet
                   ? "w-1/3"
                   : "w-1/5"
                 : "hidden"
               : "hidden"
-          } bg-forceground-color rounded-xl px-6 py-4`}
+            } bg-forceground-color rounded-xl px-1 py-4`}
         >
           <RightSideBar />
         </div>
       </div>
 
-      <div className="h-16">
-        <Footer />
+      <div className="h-17">
+        {isLogin ? <PlayingBar /> : <Footer />}
       </div>
     </div>
   );
