@@ -81,7 +81,7 @@ const MainLayout = () => {
               ? sidebarRight
                 ? tablet
                   ? "w-1/3"
-                  : "w-1/5"
+                  : "w-[30%]"
                 : "hidden"
               : "hidden"
           } bg-forceground-color rounded-xl px-1 py-4`}
