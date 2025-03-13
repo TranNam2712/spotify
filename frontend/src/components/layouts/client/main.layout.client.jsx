@@ -53,7 +53,7 @@ const MainLayout = () => {
                 : "w-[5%]"
               : "w-1/4"
           } bg-forceground-color rounded-xl ${
-            isCollapseSidebarLeft ? "md:px-2 lg:px-6" : ""
+            isCollapseSidebarLeft ? "md:px-2 lg:px-4" : ""
           }  py-4`}
         >
           <LeftSideBar
