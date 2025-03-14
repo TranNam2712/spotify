@@ -1,0 +1,142 @@
+/* SignUp.css */
+.signup-container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+  }
+  
+  .signup-form {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #121212;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1a1a1a;
+    color: white;
+  }
+  
+  .link-alt {
+    color: #1db954;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .btn-next {
+    width: 100%;
+    padding: 10px;
+    background-color: #1db954;
+    border-radius: 30px;
+    color: black;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .btn-next:hover {
+    background-color: #1ed760;
+  }
+  
+  .divider {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #aaa;
+    margin: 20px 0;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    border-top: 1px solid #444;
+  }
+  
+  .divider span {
+    padding: 0 10px;
+  }
+  
+  .social-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 30px;
+    border: 1px solid #444;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .social-btn img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .social-btn:hover {
+    border-color: white;
+  }
+  
+  .have-account {
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  .login-link {
+    color: #1db954;
+    text-decoration: underline;
+  }
+  
+  .login-link:hover {
+    color: #1ed760;
+  }
+  

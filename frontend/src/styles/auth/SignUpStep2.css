@@ -1,0 +1,157 @@
+/* 📌 Toàn bộ container */
+.signup-step2-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Màu nền đen của Spotify */
+    color: white;
+}
+
+/* 📌 Form chính */
+.signup-step2-form {
+    background-color: #121212;
+    padding: 40px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+/* 📌 Logo Spotify */
+.logo {
+    width: 50px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* 📌 Thanh tiến trình */
+.progress-bar-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #1db954 63%, #333 63%);
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+
+
+/* 📌 Tiêu đề */
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.back-icon {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.step-text {
+    color: gray;
+}
+
+/* 📌 Form group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    border: 1px solid #333;
+}
+
+/* 📌 Ngày sinh */
+.dob-container {
+    display: flex;
+    gap: 10px;
+}
+
+.dob-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    border: 1px solid #333;
+}
+
+/* 📌 Giới tính */
+.gender-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.gender-options label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: white;
+    gap: 5px;
+    width: 45%; /* Căn đều 2 cột */
+}
+
+.gender-options input[type="radio"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.gender-options input[type="radio"]:checked::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #1db954;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 📌 Tạo khoảng cách đồng đều */
+.gender-options label:nth-child(odd) {
+    margin-right: 10px;
+}
+
+
+.btn-next:hover {
+    background-color: #1ed760;
+}
+
+/* 📌 Định dạng cho phần thông tin bảo mật */
+.privacy-info {
+    font-size: 12px;
+    color: gray;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.privacy-info a {
+    color: white;
+    text-decoration: underline;
+}

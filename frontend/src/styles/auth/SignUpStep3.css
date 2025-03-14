@@ -1,0 +1,95 @@
+/* 📌 Toàn bộ container */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Màu nền đen của Spotify */
+    color: white;
+}
+
+/* 📌 Form chính */
+.signup-form {
+    background-color: #121212;
+    padding: 40px;
+    width: 400px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* 📌 Logo Spotify */
+.logo {
+    width: 50px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* 📌 Thanh tiến trình */
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #1db954 100%, #333 100%);
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+
+/* 📌 Tiêu đề */
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* 📌 Container điều khoản */
+.terms-container {
+    margin-top: 20px;
+}
+
+.terms-option {
+    display: flex;
+    align-items: center;
+    background-color: #181818;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.terms-option input {
+    margin-right: 10px;
+}
+
+/* 📌 Văn bản điều khoản */
+.terms-text {
+    font-size: 12px;
+    color: gray;
+    margin-top: 10px;
+}
+
+.terms-text .link {
+    color: #1db954;
+    text-decoration: none;
+}
+
+.terms-text .link:hover {
+    text-decoration: underline;
+}
+
+/* 📌 Nút Sign Up */
+.btn-signup {
+    width: 100%;
+    padding: 12px;
+    background-color: #1db954;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+.btn-signup:hover {
+    background-color: #1ed760;
+}
